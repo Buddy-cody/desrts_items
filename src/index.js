@@ -9,11 +9,11 @@ import GlobleState from "./context";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <BrowserRouter>
-    <React.StrictMode>
+    <>
       <GlobleState>
         <App />
       </GlobleState>
-    </React.StrictMode>
+    </>
   </BrowserRouter>
 );
 

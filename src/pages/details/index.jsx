@@ -17,7 +17,8 @@ const Details = () => {
         `https://forkify-api.herokuapp.com/api/v2/recipes/${id}`
       );
       const data = await response.json();
-
+     
+      console.log(recipeDetailsData?.recipe?.ingredients);
       if (data?.data) {
         setRecipeDetailsData(data?.data);
       }
@@ -62,8 +63,8 @@ const Details = () => {
             Ingradients:
           </span>
           <ul className="flex flex-col gap-3">
-            {recipeDetailsData?.recipe?.ingredients.map((ingredient) => (
-              <li key={ingredient.id}>
+            {recipeDetailsData?.recipe?.ingredients.map((ingredient, i) => (
+              <li key={i}>
                 <span className="text-2xl font-semibold text-black">
                   {ingredient.quantity} {ingredient.unit}
                 </span>
