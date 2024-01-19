@@ -24,7 +24,7 @@ const Details = () => {
       }
     }
     getRecipeDetails();
-  }, []);
+  }, [id]);
 
   return (
     <div className="container mx-auto py-10 grid grid-col-1 lg:grid-cols-2 gap-10">
